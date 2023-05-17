@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="js/libs/axios.min.js"></script>
+    <script src="js/utils/include.js"></script>
+
+    <script src="js/header.js" type="module"></script>
+    <script src="js/create_book.js" type="module"></script>
+
+    <!-- <script src="js/index.js" type="module"></script> -->
+
+    <title>Create Book</title>
+</head>
+
+<body>
+    <div id="page-header"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4 d-flex align-content-center justify-content-center">
+                <h2>Create Book</h2>
+            </div>
+            <div class="col-4"></div>
+        </div>
+        <div id="errors"></div>
+        <form class="row g-3" id="createBookForm">
+            <div class="col-md-6">
+                <label for="bookName" class="form-label">Name</label>
+                <input type="text" class="form-control" id="bookName" name="title" placeholder="Book Title" required>
+            </div>
+            <div class="col-md-6">
+                <label for="bookAuthor" class="form-label">Author</label>
+                <input type="text" class="form-control" id="bookAuthor" name="author" placeholder="Author of the book" required>
+            </div>
+            <div class="col-6">
+                <label for="bookReleaseDate" class="form-label">Release Date</label>
+                <input type="date" class="form-control text-secondary" id="bookReleaseDate" name="releaseDate" required>
+            </div>
+            <div class="col-6">
+                <label for="bookNumPages" class="form-label">Pages</label>
+                <input type="number" class="form-control" id="bookNumPages" required min="0" name="numPages">
+            </div>
+            <div class="col-md-12">
+                <label for="bookImageURL" class="form-label">Image URL</label>
+                <input type="text" class="form-control" id="bookImageURL" placeholder="Paste the URL of the book's cover" name="imageUrl" required>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary" id="createButton">Create</button>
+            </div>
+        </form>
+    </div>
+
+    <script>include("header.html", "#page-header");</script>
+</body>
+
+</html>
